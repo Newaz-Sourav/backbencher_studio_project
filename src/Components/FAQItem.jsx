@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import minus from "../assets/button.png"
-import plus from "../assets/buttonPlus.png"
+import minus from "../assets/btn.png"
+import plus from "../assets/btnPlus.png"
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
