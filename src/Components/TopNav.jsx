@@ -1,63 +1,110 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { ArrowRight, Menu, X } from "lucide-react";
 
 export default function TopNav() {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    'home', 'Why It Works', 'Features', 'How It Works', 'Testimonials',
-    'Before & After', 'Science', 'FAQs', 'Shop Bundles'
-  ];
+  { name: "home", id: "home" },
+  { name: "Why It Works", id: "why" },
+  { name: "Features", id: "features" },
+  { name: "How It Works", id: "how-it-works" },
+  { name: "Testimonials", id: "testimonial-slider" },
+  { name: "Before & After", id: "before-after" },
+  { name: "Science", id: "science" },
+  { name: "FAQs", id: "faqs" },
+  { name: "Shop Bundles", id: "shop-bundles" },
+];
 
   return (
-    <div className="w-full px-4 md:px-8 lg:px-24 py-4 top-0 bg-white border-b border-white/50 z-50 fixed">
-      <div className="max-w-screen-xl mx-auto flex justify-between items-center">
-        <div className="w-16 h-8 bg-[url('/logo.jpg')] bg-contain bg-no-repeat bg-center" />
-
-
-
+    <div className="w-full fixed top-0 bg-white z-50 px-[104px]">
+      <div className="flex flex-row w-full min-h-[49px] my-4 items-center justify-between">
+        {/* Logo */}
+        <div className="w-[67.6325px] h-[32px] bg-[url('/logo.jpg')] bg-contain bg-no-repeat bg-center" />
 
         {/* Desktop menu */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex gap-4">
           {navItems.map((item, idx) => (
             <div
               key={idx}
-              className="text-zinc-950 lg:text-[10px] xl:text-[15px] 2xl:text-[19px] font-normal leading-relaxed tracking-tight font-[Montserrat] cursor-pointer hover:text-orange-500 transition"
+              className="flex pt-[12px] pb-[11px] px-2 cursor-pointer"
+              onClick={() => {
+                setIsMobileMenuOpen(false); // close mobile menu on click
+                const target = document.getElementById(item.id);
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
-              {item}
+              <span className="font-[400] text-[#070707] text-[16px] leading-[160%] tracking-[0.5%]">
+                {item.name}
+              </span>
             </div>
           ))}
 
-          <div className="bg-orange-500 text-white px-4 py-2 rounded-full font-medium font-[Montserrat] hover:bg-orange-600 transition flex items-center gap-2">
-            Contact Us
-            <div className="w-3.5 h-2.5 bg-neutral-900 outline outline-[1.5px] outline-offset-[-0.75px] outline-white" />
-          </div>
-        </div>
-
-        {/* Hamburger icon */}
-        <div className="lg:hidden">
           <button
-            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-2xl text-zinc-950 focus:outline-none"
+            onClick={() => {
+              setIsMobileMenuOpen(false); // closes mobile menu
+              const target = document.getElementById("contact-us");
+              if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="flex cursor-pointer ml-2 bg-[#FF6600] text-white rounded-[100px] border border-[#000000] py-[14px] pl-[26px] pr-4 gap-[8px] hover:bg-orange-600 transition"
           >
-            ☰
+            <span className="font-medium text-[16px] leading-[160%] text-white">
+              Contact Us
+            </span>
+            <ArrowRight size={24} />
           </button>
         </div>
+
+        {/* Mobile menu icon */}
+        <button
+          className="lg:hidden"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden mt-2 flex flex-col gap-2 bg-white px-4 py-2 rounded shadow">
-          {navItems.map((item, idx) => (
-            <div
-              key={idx}
-              className="text-zinc-950 text-sm font-normal font-[Montserrat] cursor-pointer hover:text-orange-500 transition"
-            >
-              {item}
-            </div>
-          ))}
+        <div className="lg:hidden mt-2 mb-4">
+          <div className="flex flex-col gap-4">
+            {navItems.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex pt-[12px] pb-[11px] px-2 cursor-pointer"
+                onClick={() => {
+                  setIsMobileMenuOpen(false); // close mobile menu on click
+                  const target = document.getElementById(item.id);
+                  if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                <span className="font-[400] text-[#070707] text-[16px] leading-[160%] tracking-[0.5%]">
+                  {item.name}
+                </span>
+              </div>
+            ))}
 
-          <div className="bg-orange-500 text-white px-4 py-2 rounded-full font-medium font-[Montserrat] hover:bg-orange-600 transition mt-2 text-center">
-            Contact Us
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false); // closes mobile menu
+                const target = document.getElementById("contact-us");
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="flex cursor-pointer ml-2 bg-[#FF6600] text-white rounded-[100px] border border-[#000000] py-[14px] pl-[26px] pr-4 gap-[8px] hover:bg-orange-600 transition"
+            >
+              <span className="font-medium text-[16px] leading-[160%] text-white">
+                Contact Us
+              </span>
+              <ArrowRight size={24} />
+            </button>
           </div>
         </div>
       )}

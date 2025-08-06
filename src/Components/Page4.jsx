@@ -1,28 +1,34 @@
 import React from 'react';
+import kit from "../assets/kit.png"
 
 const Page4 = () => {
   return (
-    <div className="w-full bg-amber-900 px-[7.5vw] py-[6vh] flex flex-col gap-20">
+    <div id="how-it-works" className="w-full h-auto bg-amber-900 flex flex-col gap-0 ">
+      
       {/* Section 1 – How it Works */}
-      <div className="flex flex-col lg:flex-row gap-12 justify-center items-start">
-        {/* Left Column */}
-        <div className="flex-1 flex flex-col gap-8">
-          <div className="flex flex-col gap-4">
-            <h2 className="text-white text-5xl font-semibold leading-[62px]">How It Works</h2>
-            <p className="text-white text-base font-medium leading-relaxed tracking-tight">
-              Using our nasal clip is effortless and effective. Follow these steps to enjoy better airflow and relief from snoring or congestion.
-            </p>
+      <div className="flex flex-col lg:flex-row py-20 gap-[48px] justify-center w-full ">
+        {/* Left – Heading + Image */}
+        <div className="flex flex-col gap-[16px] flex-1 max-w-[584px] text-white">
+          <h2 className="text-[48px] font-semibold leading-[130%]">How It Works</h2>
+          <p className="text-[16px] font-medium leading-[160%]">
+            Using our nasal clip is effortless and effective. Follow these steps to enjoy better airflow and relief from snoring or congestion.
+          </p>
+          <div className="min-w-[584px] min-h-[606px] ">
+            <img
+              src="public/boy.png"
+              alt="Steps Illustration"
+              className="w-full h-full object-cover rounded-[16px] "
+            />
           </div>
-          <img src="https://placehold.co/584x606" alt="Steps Illustration" className="rounded-2xl w-full" />
         </div>
 
-        {/* Steps */}
-        <div className="flex-1 flex flex-col gap-4 ">
+        {/* Right – Steps */}
+        <div className="flex flex-col flex-1 max-w-[584px] gap-[16px] text-white ">
           {[
             {
               title: 'Clean',
               step: 'Step 1',
-              bg: 'bg-orange-500',
+              bg: 'bg-[#FF6600]',
               text: (
                 <>
                   Clean your nose thoroughly to remove any dirt or oil from the skin. Let your nose dry completely before applying the Tabs. <br />
@@ -33,42 +39,44 @@ const Page4 = () => {
             {
               title: 'Apply',
               step: 'Step 2',
-              bg: 'bg-white/10',
+              bg: 'bg-[#FFFFFF1A] ',
               text: (
                 <>
-                  Using the Applicator. Apply one adhesive Tab to each side of your nose just above the nostrils. Press each Tab onto your skin to ensure complete contact. Wait a few minutes before attaching the band.
+                  Using the Applicator. apply one adhesive Tab
+                  to each side Of your nose. just above the
+                  nostrils. Press each Tab onto your skin to ensure complete contact. Wait a few minutes before attaching the band.
                 </>
               ),
             },
             {
               title: 'Tab placement',
               step: 'Step 3',
-              bg: 'bg-white/10',
+              bg: 'bg-[#FFFFFF1A] ',
               text: (
                 <>
-                  There are some tips to use I-Will. <br />
-                  Steel disc placed directly above the nostril (not on the nostril) <br />
-                  Contoured indent fits around the nostril <br />
-                  100% contact with skin on the nose, not the cheek. Always be sure to apply the Tabs properly. If the Tabs aren't placed well, the Band will not attach well.
+                  Steel disc placed directly above the nostril (not on the nostril). Contoured indent fits around the nostril. Ensure 100% contact with skin on the nose—not the cheek.
                 </>
               ),
             },
             {
               title: 'Attach',
               step: 'Step 4',
-              bg: 'bg-white/10',
+              bg: 'bg-[#FFFFFF1A] ',
               text: (
                 <>
                   Place the U-will band over your nose. The magnetic ends of the Band will snap onto the Tabs. <br />
-                  <span className="font-semibold">Pro-tip:</span> Make sure the Band is not upside down. The magnets should be facing down.
+                  <span className="font-semibold">Pro-tip:</span> Make sure the Band is not upside down.
                 </>
               ),
             },
           ].map((item, index) => (
-            <div key={index} className={`relative p-6 rounded-xl backdrop-blur-sm ${item.bg} text-white  `}>
-              <div className="text-2xl font-semibold tracking-tight leading-loose mb-1">{item.title}</div>
-              <div className="text-sm tracking-tight leading-tight">{item.text}</div>
-              <div className="absolute top-0 right-0 bg-amber-700 px-3 py-1 rounded-tr-xl rounded-bl-xl text-xs font-medium">
+            <div
+              key={index}
+              className={`relative p-[24px] rounded-[12px] backdrop-blur-sm ${item.bg}`}
+            >
+              <div className="text-[24px] mb-4 leading-[130%] text-[#FFFFFF] font-semibold">{item.title}</div>
+              <div className="text-[14px] font-[400] leading-[140%] ">{item.text}</div>
+              <div className={`absolute ${index==0 ? "bg-[#B54800] " : "bg-[#FF6600] "} top-0 right-0 px-3 py-1 rounded-tr-xl rounded-bl-xl text-[12px] font-medium`}>
                 {item.step}
               </div>
             </div>
@@ -76,10 +84,11 @@ const Page4 = () => {
         </div>
       </div>
 
-      {/* Section 2 – What’s in start kit */}
-      <div className="flex flex-col-reverse lg:flex-row gap-12 justify-center items-start">
-        {/* Left: Features */}
-        <div className="flex-1 flex flex-col  gap-4 sm:mt-1 xl:mt-[220px] w-[100%] sm:w-[100%] md:mt-5 lg:mt-26">
+      {/* Section 2 – What's in Start Kit */}
+      <div className="flex flex-col-reverse py-12 lg:flex-row gap-[48px] justify-center items-stretch  ">
+        
+        {/* Left – Features Content aligned with image bottom */}
+        <div className="flex-1  flex flex-col justify-end max-w-[584px] gap-[16px] text-white ">
           {[
             {
               title: '4 Bands',
@@ -87,25 +96,41 @@ const Page4 = () => {
             },
             {
               title: '15 or 30 Tabs',
-              text: "Tabs are made with 3M tape, they're safe for sensitive skin",
+              text: "Tabs are made with 3M tape, they're safe for sensitive skin.",
             },
             {
               title: 'Applicator',
               text: 'Use magnetic Applicator to pick up and attach Tab precisely.',
             },
           ].map((item, index) => (
-            <div key={index} className="p-6 bg-white/10 backdrop-blur-sm rounded-xl text-white md:h-[105px] xl:h-[145px] flex flex-col gap-2 xl:gap-4 ">
-              <div className="text-2xl font-semibold tracking-tight leading-loose">{item.title}</div>
-              <div className="text-sm font-normal tracking-tight leading-tight">{item.text}</div>
+            <div
+              key={index}
+              className="p-[24px] bg-white/10 backdrop-blur-sm rounded-[12px] flex flex-col gap-[16px]"
+            >
+              <div className="text-[24px] font-semibold leading-[130%] text-white">{item.title}</div>
+              <div className="text-[14px] font-[400] leading-[140%] text-white">{item.text}</div>
             </div>
           ))}
         </div>
 
-        {/* Right: Image + Title */}
-        <div className="flex-1 flex flex-col gap-4">
-          <div className="text-white text-[40px] lg:text-[48px] font-semibold leading-[1.2] lg:leading-[62px] mt-[-45px]">What’s in start kit</div>
-          <img src="https://placehold.co/584x413" alt="Starter Kit" className="rounded-2xl w-full h-100 lg:h-108 xl:h-[660px] object-cover" />
+        {/* Right – Title + Responsive Image */}
+       <div className="flex flex-col items-start ">
+          <h2 className="text-white text-[40px] md:text-[48px] font-semibold leading-[130%]">
+            What’s in Start Kit
+          </h2>
+          <p className="text-white text-[16px] mt-2 font-medium leading-[160%]">
+            Everything you need to get started on better breathing.
+          </p>
+          <div className='min-w-[584px] h-[413px] mt-8 ' >
+            <img
+              src={kit}
+              alt="Starter Kit"
+              className="min-w-[584px] h-[413px] object-cover rounded-[16px]"
+            />
+          </div>
         </div>
+
+
       </div>
     </div>
   );

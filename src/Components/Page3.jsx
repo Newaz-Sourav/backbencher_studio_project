@@ -2,38 +2,44 @@ import React from 'react';
 
 const Page3 = () => {
   return (
-    <div className="w-full bg-amber-900 py-16 px-4 sm:px-10 lg:px-28 flex flex-col gap-16">
+    <div id="features" className="w-full bg-[#6B2B00] py-[80px] px-[112] flex flex-col justify-center items-center gap-12 ">
 
       {/* Section 1: Pain Points */}
-      <div className="flex flex-col lg:flex-row items-center gap-10">
-        <img
-          src="public/sleep1.png"
-          alt="Pain point image"
-          className="w-full lg:w-[50%] h-auto rounded-3xl object-cover "
-        />
+      <div className="flex flex-col  lg:flex-row justify-center items-center gap-12 ">
+        {/* Image */}
+        <div className=" min-w-[584px] h-[478px] ">
+          <img
+            src="public/sleep1.png"
+            alt="Pain point image"
+            className="min-w-[584px] h-[478px] object-cover rounded-[26px] "
+          />
+        </div>
 
-        <div className="w-full lg:w-[50%] flex flex-col gap-6">
-          <h2 className="text-white text-3xl sm:text-4xl font-semibold leading-snug font-montserrat">
+        {/* Content */}
+        <div className="w-full lg:w-1/2 flex flex-col gap-0">
+          <h2 className="text-white text-[48px] font-semibold leading-[130%] font-montserrat">
             Pain Points
           </h2>
-          <h3 className="text-white text-xl sm:text-2xl font-semibold font-montserrat tracking-tight">
+          <h3 className="text-white text-[24px] my-[14px] leading-[130%] font-semibold font-montserrat tracking-tight">
             Struggling with Snoring or Congestion?
           </h3>
-          <p className="text-white text-base font-medium leading-relaxed font-montserrat tracking-tight">
+          <p className="text-white text-[18px] font-medium leading-[160%] font-montserrat tracking-tight max-w-[584px] ">
             Whether it's snoring, allergies, or breathing difficulties during exercise, our nasal clip is here to help. These issues can disrupt your sleep, lower your energy, and impact your quality of life.
           </p>
 
           {/* Pain List */}
-          <ul className="flex flex-col gap-3 mt-4">
+          <ul className="flex flex-col gap-4 mt-6 ">
             {[
               'Persistent snoring',
               'Nasal congestion',
               'Allergies affecting breathing',
               'Struggling to breathe during workouts'
             ].map((item, idx) => (
-              <li key={idx} className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                <span className="text-white text-base font-semibold leading-relaxed font-montserrat">{item}</span>
+              <li key={idx} className="flex items-center gap-[6px] ">
+                <div className="w-3 h-3 bg-orange-500 rounded-full flex-shrink-0" />
+                <span className="text-white text-[16px] font-semibold leading-[160%] font-montserrat">
+                  {item}
+                </span>
               </li>
             ))}
           </ul>
@@ -41,40 +47,47 @@ const Page3 = () => {
       </div>
 
       {/* Section 2: Solution Overview */}
-      <div className="flex flex-col lg:flex-row-reverse items-center gap-10">
-        <img
-          src="public/image.png"
-          alt="Solution image"
-          className="w-full lg:w-[50%] h-auto rounded-3xl object-cover"
-        />
+      <div className="flex flex-col lg:flex-row-reverse justify-center items-center gap-12">
+        {/* Image */}
+        <div className=" min-w-[584px] h-[478px]">
+          <img
+            src="public/image.png"
+            alt="Solution image"
+            className="min-w-[584px] h-[478px] object-cover rounded-[26px]"
+          />
+        </div>
 
-        <div className="w-full lg:w-[50%] flex flex-col gap-6">
-          <h2 className="text-white text-3xl sm:text-4xl font-semibold leading-snug font-montserrat">
+        {/* Content */}
+        <div className="w-full lg:w-1/2 flex flex-col gap-0">
+          <h2 className="text-white text-[48px] font-semibold leading-[130%] font-montserrat">
             Solution Overview
           </h2>
-          <h3 className="text-white text-xl sm:text-2xl font-semibold font-montserrat tracking-tight">
+          <h3 className="text-white text-[24px] my-[14px] leading-[130%] font-semibold font-montserrat tracking-tight">
             Struggling with Snoring or Congestion?
           </h3>
-          <p className="text-white text-base font-medium leading-relaxed font-montserrat tracking-tight">
+          <p className="text-white text-[18px] font-medium leading-[160%] font-montserrat tracking-tight max-w-[584px] ">
             Discover how our innovative solution addresses these issues effectively and comfortably.
           </p>
 
           {/* Solution List */}
-          <ul className="flex flex-col gap-3 mt-4">
+          <ul className="flex flex-col gap-4 mt-6 ">
             {[
               'Enhance airflow',
               'Reduce snoring',
               'Clear nasal passages',
               'Made from soft materials'
             ].map((item, idx) => (
-              <li key={idx} className="flex items-center gap-2">
-                <div className="w-4 h-4 bg-orange-500 rounded-md"></div>
-                <span className="text-white text-base font-semibold leading-relaxed font-montserrat">{item}</span>
+              <li key={idx} className="flex items-center gap-[6px] ">
+                <div className="w-3 h-3 bg-orange-500 rounded-full flex-shrink-0" />
+                <span className="text-white text-[16px] font-semibold leading-[160%] font-montserrat">
+                  {item}
+                </span>
               </li>
             ))}
           </ul>
         </div>
       </div>
+
     </div>
   );
 };

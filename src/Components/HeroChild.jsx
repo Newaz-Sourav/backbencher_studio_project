@@ -3,6 +3,7 @@ import React from "react";
 const HeroChild = () => {
   return (
     <section
+    id="home"
       className="
         absolute 
         left-4 top-20
@@ -16,7 +17,7 @@ const HeroChild = () => {
       "
     >
       {/* Avatar & Title with Description */}
-      <div className="flex flex-col items-start gap-4 w-full h-auto">
+      <div className="flex flex-col items-start gap-0 w-full h-auto">
         {/* Avatar & Badge */}
         <div className="flex items-center w-full relative h-[42px]">
           {["femaleAvatar.png", "Avatar1.png", "Avatar.png"].map((avatar, idx) => (
@@ -29,7 +30,7 @@ const HeroChild = () => {
           ))}
 
           {/* Badge */}
-          <div className="ml-4 px-4 py-2 bg-[#F5F7F9] rounded-full flex items-center gap-1 h-[33px]">
+          <div className="ml-[-8px] z-10 px-4 py-[10px] bg-[#F5F7F9] rounded-full flex items-center gap-1 not-first-of-type:">
             <span className="font-montserrat font-semibold text-xs text-[#242A33]">
               26k Happy Customers
             </span>
@@ -42,7 +43,7 @@ const HeroChild = () => {
             font-montserrat font-semibold
             text-2xl sm:text-4xl md:text-5xl lg:text-[64px]
             leading-tight lg:leading-[120%]
-            text-white mt-6 w-full
+            text-white mb-4 w-full
           "
         >
           Breathe better, live better!
@@ -64,15 +65,13 @@ const HeroChild = () => {
         <button
           className="
             flex items-center justify-center gap-2
-            px-6 py-4 
-            w-[140px] sm:w-[160px] 
-            h-[50px] sm:h-[58px] 
+            pl-[26px] pr-4 py-4 
             bg-[#FF6600] hover:bg-orange-600 
-            rounded-full 
+            rounded-[100px] 
             font-montserrat font-semibold 
-            text-sm sm:text-base 
+            text-sm sm:text-[16px] 
             text-white tracking-wide
-            transition-all duration-300
+            transition-all duration-300 mt-[42px]
           "
         >
           <span>Shop Now</span>
