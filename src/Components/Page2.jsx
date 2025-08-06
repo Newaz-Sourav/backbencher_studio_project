@@ -142,7 +142,7 @@ const Page2 = () => {
         <div className="grid grid-cols-2 gap-[16px] mt-4 max-w-[452px]">
           {benefits.map((benefit, idx) => (
             <div key={idx} className="flex items-center gap-2">
-              <img src="/public/sign.png" alt="sign" className="w-5 h-5" />
+              <img src="/sign.png" alt="sign" className="w-5 h-5" />
               <span className="text-[18px] font-medium text-[#242A33] leading-[#242A33] ">{benefit}</span>
             </div>
           ))}
