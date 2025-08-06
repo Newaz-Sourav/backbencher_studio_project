@@ -32,8 +32,11 @@ function App() {
       <Page3 />
     </div>
 
-    <div className="px-[112px]" >
+    <div className="pl-[112px]" >
       <NasalClipFeatures />
+    </div>
+
+    <div className="px-[112px]" >
       <TestimonialSlider />
     </div>
 

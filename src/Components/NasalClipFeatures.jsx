@@ -27,7 +27,7 @@ const NasalClipFeatures = () => {
 
       {/* Image Grid + Arrows */}
       <div className=" w-full relative overflow-hidden">
-        <div className="w-full relative flex flex-col justify-center items-center " >
+        <div className=" mr-[112px] relative flex flex-col justify-center items-center " >
             <p className="text-center text-[16px] leading-[160%] max-w-[634px]  text-[#070707] mb-8 ">
                 Our nasal clip provides a simple, effective solution for snoring, congestion,
                 and improved airflow during activities, offering comfort and relief.
