@@ -15,7 +15,7 @@ const Page4 = () => {
           </p>
           <div className="min-w-[584px] min-h-[606px] ">
             <img
-              src="public/boy.png"
+              src="/boy.png"
               alt="Steps Illustration"
               className="w-full h-full object-cover rounded-[16px] "
             />

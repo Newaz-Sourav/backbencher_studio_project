@@ -26,7 +26,7 @@ const Backed_by_Sc = () => {
             ].map((text, index) => (
               <div key={index} className="flex items-center gap-2 ">
                 <img
-                  src="public/sign.png"
+                  src="/sign.png"
                   alt="check icon"
                   className="w-[18px] h-[18px] "
                 />
@@ -41,7 +41,7 @@ const Backed_by_Sc = () => {
         {/* Right Image */}
         <div className="flex-1 flex justify-center items-center">
           <img
-            src="public/ligh.png"
+            src="/ligh.png"
             alt="Scientific imagery"
             className="w-[686px] h-[500px] object-contain ml-[17.8867px] mr-[28.9974px] mb-[54.2792px]"
           />

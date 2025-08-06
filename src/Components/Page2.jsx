@@ -152,7 +152,7 @@ const Page2 = () => {
         <button className="max-w-[554px] h-[55px] flex justify-center items-center gap-[8px] 
         py-[16px] bg-[#FF6600] hover:bg-orange-600 rounded-[100px] text-white font-semibold font-montserrat transition-all duration-300 text-[16px] my-6 ">
           <span className=' '>Add to Cart</span> 
-          <img src="/public/Arrow To Right.png" alt="Arrow" className="w-6 h-6" />
+          <img src="/Arrow To Right.png" alt="Arrow" className="w-6 h-6" />
         </button>
 
         {/* Payment Icons */}

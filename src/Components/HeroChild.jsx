@@ -24,7 +24,7 @@ const HeroChild = () => {
             <div key={idx} className={`relative ${idx !== 0 ? "-ml-2.5" : ""}`}>
               <div
                 className="w-[42px] h-[42px] rounded-full border-2 border-white bg-cover bg-center"
-                style={{ backgroundImage: `url('/public/${avatar}')` }}
+                style={{ backgroundImage: `url('/${avatar}')` }}
               />
             </div>
           ))}

@@ -9,7 +9,7 @@ const Page3 = () => {
         {/* Image */}
         <div className=" min-w-[584px] h-[478px] ">
           <img
-            src="public/sleep1.png"
+            src="/sleep1.png"
             alt="Pain point image"
             className="min-w-[584px] h-[478px] object-cover rounded-[26px] "
           />
@@ -51,7 +51,7 @@ const Page3 = () => {
         {/* Image */}
         <div className=" min-w-[584px] h-[478px]">
           <img
-            src="public/image.png"
+            src="/image.png"
             alt="Solution image"
             className="min-w-[584px] h-[478px] object-cover rounded-[26px]"
           />
